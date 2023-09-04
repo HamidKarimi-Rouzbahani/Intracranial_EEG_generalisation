@@ -8,17 +8,15 @@ doi: https://doi.org/10.1101/2023.08.29.23294708
 This is the readme file for the scripts used in the study.
 
 The analyis scripts are the ones whose file names start with Cx, x referring the order of use from epoching the data to plotting the final figures.
-The scripts have cooments to help with their understanding. But, please feel free to contact Hamid Karimi-Rouzbahani at hkarimi265@gmail.com if you have qny questions.
+The scripts have coments to help with their understanding. But, please feel free to contact Hamid Karimi-Rouzbahani at hkarimi265@gmail.com if you have qny questions.
 The other scripts, which do not start with a C, are feature extraction scripts, which are called within the "C2_Alldsets_Seizure_all_feature_extraction.m". Each of them
 has been explained in the manuscript and cited in the following references:
 
 Karimi-Rouzbahani, H., Shahmohammadi, M., Vahab, E., Setayeshi, S., & Carlson, T. (2021). Temporal variabilities provide additional category-related information in object
-category decoding: a systematic comparison of informative EEG features. Neural Computation, 33(11), 3027-3072.
-
-and
-
+category decoding: a systematic comparison of informative EEG features. Neural Computation, 33(11), 3027-3072. https://doi.org/10.1162/neco_a_01436
+&
 Karimi-Rouzbahani, H., & Woolgar, A. (2022). When the whole is less than the sum of its parts: maximum object category information and behavioral prediction in multiscale
-activation patterns. Frontiers in Neuroscience, 16, 825746.
+activation patterns. Frontiers in Neuroscience, 16, 825746. https://doi.org/10.3389/fnins.2022.825746
 
 
 I provide below a short discription of each of the custom scripts used in the current manuscript - the scripts with C as their initial letter in file name. More details can be found within each script.
