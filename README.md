@@ -14,7 +14,9 @@ has been explained in the manuscript and cited in the following references:
 
 Karimi-Rouzbahani, H., Shahmohammadi, M., Vahab, E., Setayeshi, S., & Carlson, T. (2021). Temporal variabilities provide additional category-related information in object
 category decoding: a systematic comparison of informative EEG features. Neural Computation, 33(11), 3027-3072. https://doi.org/10.1162/neco_a_01436
+
 &
+
 Karimi-Rouzbahani, H., & Woolgar, A. (2022). When the whole is less than the sum of its parts: maximum object category information and behavioral prediction in multiscale
 activation patterns. Frontiers in Neuroscience, 16, 825746. https://doi.org/10.3389/fnins.2022.825746
 
