@@ -15,7 +15,7 @@ all_patients=[1:39 41:56]; % patient indices
 ff=0;
 features_used=[1:34]; % features to incorporate
 ff=ff+1;
-for iter_equalis=1:1 % how many iterations
+for iter_equalis=1:1000 % how many iterations
     p=0;
     for Patient=all_patients % classificaiton/generalisation is performed
         % for each patient separately

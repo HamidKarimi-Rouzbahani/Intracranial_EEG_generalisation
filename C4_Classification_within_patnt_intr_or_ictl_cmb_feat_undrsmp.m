@@ -14,7 +14,7 @@ all_patients=[1:39 41:56]; % patient indices
 ff=0;
 features_used=[1:34]; % features
 ff=ff+1;
-for iter_equalis=1:10 % how many iterations
+for iter_equalis=1:1000 % how many iterations
     p=0;
     for Patient=all_patients % patient indices
         % classificaiton is performed for each patient separately

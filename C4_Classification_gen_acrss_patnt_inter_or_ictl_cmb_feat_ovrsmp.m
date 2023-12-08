@@ -16,7 +16,7 @@ all_patients=[1:39 41:56];
 ff=0;
 features_used=[1:34]; %% use all features
 ff=ff+1;
-for iter_equalis=1:1 % how many iterations
+for iter_equalis=1:1000 % how many iterations
     for p=1:length(all_patients)
         % Training and testing set indices
         all_patients_minus_one=all_patients;

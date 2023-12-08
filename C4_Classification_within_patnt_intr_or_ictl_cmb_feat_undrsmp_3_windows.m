@@ -24,7 +24,7 @@ ff=ff+1;
 tw=0;
 for time_wind=time_windows
     tw=tw+1;
-    for iter_equalis=1:10
+    for iter_equalis=1:1000
         p=0;
         for Patient=all_patients
             % classificaiton is performed for each patient separately
