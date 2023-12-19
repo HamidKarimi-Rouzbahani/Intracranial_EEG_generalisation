@@ -175,8 +175,8 @@ addpath(genpath('bayesFactor-master'))
 load('random_permutations.mat')
 participants_info=tdfread(['F:\RESEARCH\Hamid\Multicentre dataset\ds004100\participants.tsv']);
 subjects_analysed=[1:25 27:40 42:45 47:58]; % already remove 41 becuase "data" does not exist
-what=1;% 1=within patient; 2= across time; 3=across patients
-ictal_or_inter='ictal'; % 1=ictal; non-1=inter
+what=3;% 1=within patient; 2= across time; 3=across patients
+ictal_or_inter='Interictal'; % 1=ictal; non-1=inter
 Measures={'accuracy','sensitivity','specificity','precision','recall','f1-measure','gmean','auc'};
 metric=8; %AUC
 if what==1
@@ -216,7 +216,7 @@ end
 clearvars data_ready
 nans=isnan(data_tmp);
 nans([1])=1; % bad labeling of lesion (1)
-nans([4 25 30 37 38 39])=1; % resection targets with fewer than 5 patients
+nans([4 25 30 37 38])=1; % resection targets with fewer than 5 patients
 data_ready=table(data_tmp,g1,g2,g3,g4);
 data_ready(nans,:)=[];
 data_ready.Properties.VariableNames = {'Effect' 'Outcome' 'ROI' 'Lesion' 'Recording'};
