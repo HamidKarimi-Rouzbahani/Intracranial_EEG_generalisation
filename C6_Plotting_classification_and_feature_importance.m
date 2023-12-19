@@ -174,9 +174,9 @@ close all;
 addpath(genpath('bayesFactor-master'))
 load('random_permutations.mat')
 participants_info=tdfread(['F:\RESEARCH\Hamid\Multicentre dataset\ds004100\participants.tsv']);
-subjects_analysed=[1:25 27:39 41:45 47:58]; % already remove 40 becuase "data" does not have that
+subjects_analysed=[1:25 27:40 42:45 47:58]; % already remove 41 becuase "data" does not exist
 what=1;% 1=within patient; 2= across time; 3=across patients
-ictal_or_inter='Interictal'; % 1=ictal; non-1=inter
+ictal_or_inter='ictal'; % 1=ictal; non-1=inter
 Measures={'accuracy','sensitivity','specificity','precision','recall','f1-measure','gmean','auc'};
 metric=8; %AUC
 if what==1
@@ -207,7 +207,8 @@ end
 pt=0;
 for P=subjects_analysed
     pt=pt+1;
-    g1{pt,1}=participants_info.engel(P,1);
+    % g1{pt,1}=participants_info.engel(P,1);
+    g1{pt,1}=participants_info.outcome(P,1);
     g2{pt,1}=participants_info.target(P,:);
     g3{pt,1}=participants_info.lesion_status(P,:);
     g4{pt,1}=participants_info.implant(P,:);
@@ -417,9 +418,9 @@ Features_labels={'Mean','Median','Variance','Skewness','Kurtosis',...
     'Alpha Pow','Beta Pow','Gamma Pow','H-Gamma Pow','Correlation','Delta Coh',...
     'Theta Coh','Alpha Coh','Beta Coh','Gamma Coh','H-Gamma Coh'};
 participants_info=tdfread(['F:\RESEARCH\Hamid\Multicentre dataset\ds004100\participants.tsv']);
-subjects_analysed=[1:25 27:39 41:45 47:58]; % already remove 40 becuase "data" does not have that
+subjects_analysed=[1:25 27:40 42:45 47:58]; % already remove 41 becuase "data" does not exist
 what=3;% 1=within patient; 2= across time; 3=across patients
-ictal_or_inter='Ictal';
+ictal_or_inter='Interictal';
 sorted=0;
 
 if what==1
@@ -469,7 +470,6 @@ for condition=[1]
                 g{pt,1}=participants_info.implant(P,:);
             end
         end
-        
         data_bf=datas(:,feat);
         nans=isnan(data_bf);
         nans([1])=1; % bad labeling of lesion (1)
